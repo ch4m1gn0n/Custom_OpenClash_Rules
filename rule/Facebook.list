@@ -10,5 +10,5 @@ DOMAIN-SUFFIX,whatsapp.net
 DOMAIN-SUFFIX,oculus.com
 DOMAIN-SUFFIX,oculuscdn.com
 DOMAIN-KEYWORD,facebook
-IP-CIDR,31.13.70.0/18,no-resolve
-IP-CIDR,157.240.11.0/17,no-resolve
+IP-CIDR,31.13.70.0/18
+IP-CIDR,157.240.11.0/17
