@@ -59,6 +59,11 @@ DOMAIN-SUFFIX,powershellgallery.com
 DOMAIN-SUFFIX,pool.ntp.org
 # Dell
 DOMAIN-SUFFIX,dell.com
+
+DOMAIN-SUFFIX,goofish.com
+DOMAIN-SUFFIX,dbankcloud.com
+DOMAIN-SUFFIX,alipan.com
+DOMAIN-SUFFIX,keepass.info
 # 嵌入式相关
 DOMAIN-SUFFIX,jlcpcb.com
 
