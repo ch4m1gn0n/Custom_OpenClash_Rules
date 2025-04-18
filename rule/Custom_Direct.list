@@ -64,6 +64,9 @@ DOMAIN-SUFFIX,goofish.com
 DOMAIN-SUFFIX,dbankcloud.com
 DOMAIN-SUFFIX,alipan.com
 DOMAIN-SUFFIX,keepass.info
+
+# wps 思维导图
+DOMAIN-SUFFIX,wps.processon.com
 # 嵌入式相关
 DOMAIN-SUFFIX,jlcpcb.com
 
