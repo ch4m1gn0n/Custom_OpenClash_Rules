@@ -22,14 +22,14 @@ DOMAIN-SUFFIX,kit327.com
 DOMAIN-SUFFIX,msftconnecttest.com
 DOMAIN-SUFFIX,msftncsi.com
 # 暴雪战网国际服下载节点
-DOMAIN-SUFFIX,blizzard.gcdn.cloudn.co.kr
-DOMAIN-SUFFIX,level3.blizzard.com
-DOMAIN-SUFFIX,kr.cdn.blizzard.com
-DOMAIN-SUFFIX,us.cdn.blizzard.com
-DOMAIN-SUFFIX,eu.cdn.blizzard.com
-IP-CIDR,137.221.64.0/24,no-resolve
-IP-CIDR,8.251.135.126/32,no-resolve
-IP-CIDR,8.251.246.126/32,no-resolve
+# DOMAIN-SUFFIX,blizzard.gcdn.cloudn.co.kr
+# DOMAIN-SUFFIX,level3.blizzard.com
+# DOMAIN-SUFFIX,kr.cdn.blizzard.com
+# DOMAIN-SUFFIX,us.cdn.blizzard.com
+# DOMAIN-SUFFIX,eu.cdn.blizzard.com
+# IP-CIDR,137.221.64.0/24,no-resolve
+# IP-CIDR,8.251.135.126/32,no-resolve
+# IP-CIDR,8.251.246.126/32,no-resolve
 # 微软飞行模拟 2020 游戏内下载 CDN
 DOMAIN,pf-cdn-content-prod.azureedge.net
 # 松下智能家居
