@@ -16,3 +16,5 @@ DOMAIN,play.google.com
 DOMAIN-SUFFIX,clients6.google.com
 DOMAIN-SUFFIX,geller-pa.googleapis.com 
 DOMAIN,alkalicore-pa.clients6.google.com
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,googleapis.com
