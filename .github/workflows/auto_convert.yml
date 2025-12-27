@@ -1,0 +1,43 @@
+# 文件路径: .github/workflows/auto_convert.yml
+name: Auto Convert Surge List to Clash YAML
+
+# 触发条件：推送到 main 分支，且修改了 .list 文件或脚本本身
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.list'
+      - 'scripts/convert_surge_to_clash.py'
+  workflow_dispatch: # 允许手动点按钮触发
+
+jobs:
+  convert_and_push:
+    runs-on: ubuntu-latest
+    
+    # 必须赋予写权限才能提交代码
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+
+      - name: Run Conversion Script
+        run: |
+          python scripts/convert_surge_to_clash.py
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 Auto-generate Clash YAML rules"
+          file_pattern: '**.yaml' # 只提交 yaml 文件的变动
