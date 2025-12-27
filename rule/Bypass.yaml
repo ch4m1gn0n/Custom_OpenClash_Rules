@@ -1,4 +1,4 @@
 payload:
-  - '+.hdslb.com'
-  - '+.bilibili.com'
-  - '+.douyin.com'
+  - DOMAIN-SUFFIX,hdslb.com
+  - DOMAIN-SUFFIX,bilibili.com
+  - DOMAIN-SUFFIX,douyin.com
