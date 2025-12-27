@@ -1,7 +1,6 @@
-# 文件路径: .github/workflows/auto_convert.yml
 name: Auto Convert Surge List to Clash YAML
 
-# 触发条件：推送到 main 分支，且修改了 .list 文件或脚本本身
+# 触发条件
 on:
   push:
     branches:
@@ -9,13 +8,14 @@ on:
     paths:
       - '**.list'
       - 'scripts/convert_surge_to_clash.py'
-  workflow_dispatch: # 允许手动点按钮触发
+      - '.github/workflows/auto_convert.yml' # 建议把 workflows 变动也加上
+  workflow_dispatch:
+  schedule:
+    - cron: '0 22 * * *'  # 每天北京时间 06:00 运行
 
 jobs:
   convert_and_push:
     runs-on: ubuntu-latest
-    
-    # 必须赋予写权限才能提交代码
     permissions:
       contents: write
 
@@ -32,6 +32,18 @@ jobs:
         run: |
           pip install pyyaml
 
+      - name: Download Upstream Rules
+        run: |
+          # 建立 rule 目录，确保 wget 不会报错
+          mkdir -p ./rule
+          
+          # 下载文件
+          echo "正在下载 GoogleCN.list..."
+          wget https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list -O ./rule/GoogleCN.list
+          
+          # 验证文件是否下载成功（可选，方便调试）
+          ls -lh ./rule/GoogleCN.list
+
       - name: Run Conversion Script
         run: |
           python scripts/convert_surge_to_clash.py
@@ -39,5 +51,8 @@ jobs:
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "🤖 Auto-generate Clash YAML rules"
-          file_pattern: '**.yaml' # 只提交 yaml 文件的变动
+          commit_message: "🤖 Auto-update: Sync upstream rules & Regenerate YAML"
+          # ⚠️ 修改重点：去掉 file_pattern，或者显式包含 .list
+          # 建议直接删掉 file_pattern 行，默认提交所有变动
+          # 或者写成下面这样：
+          file_pattern: 'rule/*.list **/*.yaml'
