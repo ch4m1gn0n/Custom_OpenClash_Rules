@@ -38,11 +38,20 @@ jobs:
           mkdir -p ./rule
           
           # 下载文件
-          echo "正在下载 GoogleCN.list..."
+          echo "📥 1. Downloading GoogleCN.list..."
           wget https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list -O ./rule/GoogleCN.list
           
+          echo "📥 2. Downloading GoogleCNProxyIP.list..."
+          wget https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list -O ./rule/GoogleCNProxyIP.list
+
+          echo "📥 3. Downloading AiDomain.list..."
+          wget https://raw.githubusercontent.com/szkane/ClashRuleSet/refs/heads/main/Clash/Ruleset/AiDomain.list -O ./rule/AiDomain.list
+
+          echo "📥 4. Downloading Emby.list..."
+          wget https://raw.githubusercontent.com/ddgksf2013/Filter/refs/heads/master/Emby.list -O ./rule/Emby.list
+          
           # 验证文件是否下载成功（可选，方便调试）
-          ls -lh ./rule/GoogleCN.list
+          # ls -lh ./rule/GoogleCN.list
 
       - name: Run Conversion Script
         run: |
