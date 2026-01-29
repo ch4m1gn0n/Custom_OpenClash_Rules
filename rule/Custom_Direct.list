@@ -74,3 +74,5 @@ DOMAIN-SUFFIX,w8ay.fun
 
 DOMAIN-SUFFIX,114yygh.com
 
+# tailscale 域名
+DOMAIN-SUFFIX,ts.net
