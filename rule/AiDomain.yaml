@@ -35,6 +35,12 @@ payload:
   - DOMAIN-SUFFIX,x.ai
   - DOMAIN-SUFFIX,grok.com
   - DOMAIN-SUFFIX,perplexity.ai
+  - DOMAIN-SUFFIX,githubcopilot.com
+  - DOMAIN-SUFFIX,api.githubcopilot.com
+  - DOMAIN-SUFFIX,api.github.com
+  - DOMAIN-SUFFIX,github.gallery.vsassets.io
+  - DOMAIN-SUFFIX,github.gallerycdn.vsassets.io
+  - DOMAIN-SUFFIX,applicationinsights.azure.com
   - DOMAIN-KEYWORD,bing
   - DOMAIN-KEYWORD,copilot
   - DOMAIN-KEYWORD,edgeassetservice
