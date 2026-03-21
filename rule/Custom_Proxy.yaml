@@ -9,3 +9,4 @@ payload:
   - DOMAIN-SUFFIX,platformio.org
   - DOMAIN-SUFFIX,arduino.cc
   - DOMAIN-SUFFIX,macked.app
+  - DOMAIN,dl.google.com
