@@ -76,3 +76,5 @@ DOMAIN-SUFFIX,114yygh.com
 
 # tailscale 域名
 DOMAIN-SUFFIX,ts.net
+
+DOMAIN-SUFFIX,typeless-static.com
