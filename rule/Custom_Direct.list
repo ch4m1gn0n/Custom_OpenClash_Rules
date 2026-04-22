@@ -78,39 +78,3 @@ DOMAIN-SUFFIX,114yygh.com
 DOMAIN-SUFFIX,ts.net
 
 DOMAIN-SUFFIX,typeless-static.com
-
-# aliyun
-# === 优先处理 bailian（放在最前面）===
-DOMAIN,bailian.console.aliyun.com
-DOMAIN-SUFFIX,bailian.console.aliyun.com
-DOMAIN-SUFFIX,console.aliyun.com
-DOMAIN-SUFFIX,bailian.aliyun.com
-DOMAIN-SUFFIX,dashscope.aliyuncs.com
-DOMAIN-SUFFIX,alibabacloud.com
-
-# 强制直连香港阿里云常用 IP 段
-IP-CIDR,47.246.0.0/16
-IP-CIDR,47.88.0.0/16
-IP-CIDR,47.89.0.0/16
-IP-CIDR,47.244.0.0/16
-IP-CIDR,47.240.0.0/16
-
-# qq / tencent
-# === 优先处理 qq（放在最前面）===
-DOMAIN,q.qq.com
-DOMAIN-SUFFIX,q.qq.com
-DOMAIN-SUFFIX,qq.com
-DOMAIN-SUFFIX,tencent.com
-DOMAIN-SUFFIX,qqlogo.qq.com
-DOMAIN-SUFFIX,qlogo.qq.com
-DOMAIN-SUFFIX,gtimg.com
-DOMAIN-SUFFIX,idqqimg.com
-
-# 强制直连腾讯云香港/海外常用 IP 段
-IP-CIDR,43.159.0.0/16
-IP-CIDR,43.134.0.0/16
-IP-CIDR,43.152.0.0/16
-IP-CIDR,43.154.0.0/16
-IP-CIDR,43.155.0.0/16
-IP-CIDR,43.156.0.0/16
-IP-CIDR,43.157.0.0/16
